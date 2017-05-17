@@ -1,4 +1,8 @@
 ﻿
+var Name = WinRtComponent.Name;
+var Greeter = WinRtComponent.Greeter;
+
 window.onload = function() {
-    document.getElementById("greeting").innerText = WinRtComponent.Greeter.sayHelloTo("World");
+    var name = new Name("Chris", "Sano");
+    document.getElementById("greeting").innerText = Greeter.sayHelloTo(name);
 }

@@ -4,12 +4,14 @@
   "name": "angular1playground",
   "repository": "",
   "license": "MIT",
-  "devDependencies": {
-    "@types/angular": "^1.6.16",
+  "dependencies": {
+    "@types/angular": "^1.6.17",
     "@types/angular-resource": "^1.5.8",
     "@types/angularjs": "^1.5.14-alpha",
     "@types/jasmine": "^2.5.47",
     "@types/node": "^7.0.15",
+  },
+  "devDependencies": {
     "bower": "^1.5.2",
     "concurrently": "^3.4.0",
     "gulp": "^3.9.1",

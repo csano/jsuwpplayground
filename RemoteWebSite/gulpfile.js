@@ -28,6 +28,10 @@ gulp.task('copy-css', function () {
   return copyFilesWithExtension('css');
 });
 
+gulp.task('copy-dts', function () {
+  return copyFilesWithExtension('d.ts');
+});
+
 gulp.task('install-bower-components', function() {
   return bower({ directory: 'build/app/bower_components' });
 });
@@ -37,7 +41,7 @@ function compileTypescript() {
   const testFilter = filter(['app/ts/**/*.spec.js']);
 
   var sourceResult = gulp
-    .src(['app/**/*.!(component|module).ts', 'app/**/*.ts'])
+    .src(['app/**/*.!(component|module).ts', 'app/**/*.ts', 'app/**/*.d.ts'])
     .pipe(tsProject());
 
   sourceResult.js
@@ -58,4 +62,4 @@ gulp.task('watch-ts', function() {
   return gulp.watch(typescriptSources, ['compile-ts']);
 });
 
-gulp.task('default', ['compile-ts', 'install-bower-components', 'copy-css', 'copy-html']);
+gulp.task('default', ['compile-ts', 'install-bower-components', 'copy-css', 'copy-html', 'copy-dts']);

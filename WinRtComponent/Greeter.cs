@@ -4,7 +4,7 @@
     {
         public static string SayHelloTo(Name name)
         {
-            return $"Hello, {name.First}!";
+            return $"Hello, {name.First} {name.Last}!";
         }
     }
 

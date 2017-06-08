@@ -3,5 +3,5 @@ class MyController {
 }
 
 angular
-  .module("myApp")
-  .controller("MyController", MyController);
+  .module('myApp')
+  .controller('MyController', MyController);

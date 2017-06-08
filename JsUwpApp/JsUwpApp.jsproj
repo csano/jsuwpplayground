@@ -68,12 +68,12 @@
     <Content Include="images\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="images\StoreLogo.png" />
     <Content Include="images\Wide310x150Logo.scale-200.png" />
-    <Content Include="js\main.js" />
+    <Content Include="src\main.js" />
     <Content Include="css\default.css" />
     <Content Include="tsconfig.json" />
     <None Include="JsUwpApp_TemporaryKey.pfx" />
-    <TypeScriptCompile Include="ts\main.ts" />
-    <TypeScriptCompile Include="ts\winrtcomponent.d.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\winrtcomponent.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WinRtComponent\WinRtComponent.csproj" />

@@ -1,0 +1,9 @@
+﻿{
+  "compileOnSave": true,
+   "compilerOptions": {
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "target": "ES5",
+    "outFile": "js/main.js"
+  } 
+}

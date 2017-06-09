@@ -2,5 +2,12 @@
 
 window.onload = () => {
   var name = new WinRtComponent.Name("Chris", "Sano");
-  document.getElementById("greeting").innerText = WinRtComponent.Greeter.sayHelloTo(name);
+  var greeter = new WinRtComponent.Greeter();
+  greeter.ongreet = greet;
+  greeter.sayHelloTo(name);
+
+}
+
+function greet(ev: any) {
+  document.getElementById('greeting').innerText = "greeted";
 }

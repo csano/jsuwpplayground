@@ -1,10 +1,19 @@
 ﻿namespace WinRtComponent
 {
+    public delegate void GreetingHandler(object sender, GreeterEventArgs e);
+
     public sealed class Greeter
     {
-        public static string SayHelloTo(Name name)
+        public event GreetingHandler Greet;
+        public string SayHelloTo(Name name)
         {
+            DoGreet();
             return $"Hello, {name.First} {name.Last}!";
+        }
+
+        public void DoGreet()
+        {
+            Greet?.Invoke(this, new GreeterEventArgs());
         }
     }
 
@@ -18,5 +27,9 @@
             First = first;
             Last = last;
         }
+    }
+
+    public sealed class GreeterEventArgs
+    {
     }
 }

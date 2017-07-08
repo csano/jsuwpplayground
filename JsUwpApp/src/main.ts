@@ -1,6 +1,4 @@
-﻿
-
-window.onload = () => {
+﻿window.onload = () => {
   var name = new WinRtComponent.Name("Chris", "Sano");
   var greeter = new WinRtComponent.Greeter();
   greeter.ongreet = greet;
@@ -11,3 +9,9 @@ window.onload = () => {
 function greet(ev: any) {
   document.getElementById('greeting').innerText = "greeted";
 }
+
+function onActivatedHandler(eventArgs: any) {
+
+}
+
+WinJS.Application.addEventListener("activated", onActivatedHandler, false);

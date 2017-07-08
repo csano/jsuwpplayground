@@ -11,7 +11,7 @@ window.onload = () => {
 }
 
 
-function greet(ev: any) {
+function greet(ev: WinRtComponent.GreeterEventArgs) {
   document.getElementById('greeting').innerText = ev.message;
 }
 

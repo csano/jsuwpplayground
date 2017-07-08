@@ -6,12 +6,13 @@
   export class Greeter {
     doGreet(): void;
     sayHelloTo(name: Name): string;
-    ongreet: (ev: GreetingHandler) => void;
+    ongreet: (ev: GreeterEventArgs) => void;
   }
 
   export class GreeterEventArgs {
     constructor();
     toString(): string;
+    message: string;
   }
 
   export interface GreetingHandler {

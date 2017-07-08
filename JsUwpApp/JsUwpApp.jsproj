@@ -83,7 +83,7 @@
     <None Include="JsUwpApp_TemporaryKey.pfx" />
     <TypeScriptCompile Include="src\winjs.d.ts" />
     <TypeScriptCompile Include="src\main.ts" />
-    <TypeScriptCompile Include="src\winrt.d.ts" />
+    <TypeScriptCompile Include="src\winrt-uwp.d.ts" />
     <TypeScriptCompile Include="src\winrtcomponent.d.ts" />
   </ItemGroup>
   <ItemGroup>

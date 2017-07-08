@@ -12,7 +12,7 @@ window.onload = () => {
 
 
 function greet(ev: any) {
-  document.getElementById('greeting').innerText = "greeted";
+  document.getElementById('greeting').innerText = ev.message;
 }
 
 function onActivatedHandler(eventArgs: any) {

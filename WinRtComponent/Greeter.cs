@@ -5,15 +5,17 @@
     public sealed class Greeter
     {
         public event GreetingHandler Greet;
+
         public string SayHelloTo(Name name)
         {
-            DoGreet();
-            return $"Hello, {name.First} {name.Last}!";
+            var greeting = $"Hello, {name.First} {name.Last}!";
+            DoGreet(greeting);
+            return greeting;
         }
 
-        public void DoGreet()
+        public void DoGreet(string message)
         {
-            Greet?.Invoke(this, new GreeterEventArgs());
+            Greet?.Invoke(this, new GreeterEventArgs() { Message = message } );
         }
     }
 
@@ -31,5 +33,6 @@
 
     public sealed class GreeterEventArgs
     {
+        public string Message { get; internal set; }
     }
 }

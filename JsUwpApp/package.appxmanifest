@@ -23,6 +23,11 @@
       <uap:ApplicationContentUriRules>
         <uap:Rule Match="http://localhost:3000" Type="include" WindowsRuntimeAccess="all" />
       </uap:ApplicationContentUriRules>
+      <Extensions>
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="js-test" />
+        </uap:Extension>
+      </Extensions>
     </Application>
   </Applications>
   <Capabilities>

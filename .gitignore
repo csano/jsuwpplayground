@@ -74,7 +74,7 @@ artifacts/
 *.pidb
 *.svclog
 *.scc
-*.js
+JsUwpApp/src/*.js
 
 # Chutzpah Test files
 _Chutzpah*

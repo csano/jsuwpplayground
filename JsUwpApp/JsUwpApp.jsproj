@@ -79,10 +79,6 @@
     <Content Include="js\WinJS.intellisense.js" />
     <Content Include="src\main.js" />
     <Content Include="css\default.css" />
-    <Content Include="src\main.ts" />
-    <Content Include="src\winjs.d.ts" />
-    <Content Include="src\winrt-uwp.d.ts" />
-    <Content Include="src\winrtcomponent.d.ts" />
     <Content Include="tsconfig.json" />
     <None Include="JsUwpApp_TemporaryKey.pfx" />
     <TypeScriptCompile Include="src\winjs.d.ts" />

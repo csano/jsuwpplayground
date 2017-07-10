@@ -16,8 +16,9 @@ function greet(ev: WinRtComponent.GreeterEventArgs) {
 }
 
 function onActivatedHandler(eventArgs: any) {
-    if (eventArgs.detail.kind == Windows.ApplicationModel.Activation.ActivationKind.protocol) {
+    if (eventArgs.detail.kind === Windows.ApplicationModel.Activation.ActivationKind.protocol) {
 
+        //eventArgs.detail.detail[0].uri.host
     }
     console.log("activated");
 }

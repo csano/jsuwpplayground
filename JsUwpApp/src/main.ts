@@ -8,6 +8,7 @@ window.onload = () => {
     var app = WinJS.Application;
     app.addEventListener("activated", onActivatedHandler, true);
     app.start();
+    window.location.replace("http://localhost:3000");
 }
 
 

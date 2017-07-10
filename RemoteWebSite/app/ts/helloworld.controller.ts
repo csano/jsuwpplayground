@@ -1,6 +1,12 @@
 class HelloWorldController {
+  private $scope: ng.IScope;
   constructor($scope: ng.IScope) {
-    const name = new WinRtComponent.Name('Chris', 'Sano');
-    $scope.greeting = WinRtComponent.Greeter.sayHelloTo(name);
+    let name = new WinRtComponent.Name('Chris', 'Sano');
+    let greeter = new WinRtComponent.Greeter();
+    greeter.ongreet = (ev: WinRtComponent.GreetEventArgs) => {
+      $scope.greeting = ev.message;
+      $scope.$apply();
+    };
+    setTimeout(function() { greeter.sayHelloTo(name); }, 1000);
   }
 }
